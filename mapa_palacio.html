@@ -24,16 +24,71 @@
                  fill-rule="evenodd"
                  id="palacio-map">
 
+
+                <defs>
+                    <linearGradient id="publico_coletivo">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="50%" stop-color="blue" />
+                    </linearGradient>
+                    <linearGradient id="publico_particular">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="50%" stop-color="yellow" />
+                    </linearGradient>
+                    <linearGradient id="publico_privado">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="50%" stop-color="orange" />
+                    </linearGradient>
+                    <linearGradient id="publico_difuso">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="50%" stop-color="darkorchid" />
+                    </linearGradient>
+                    <linearGradient id="publico_baldio">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="50%" stop-color="saddlebrown" />
+                    </linearGradient>
+                    <linearGradient id="coletivo_particular">
+                        <stop offset="50%" stop-color="blue" />
+                        <stop offset="50%" stop-color="yellow" />
+                    </linearGradient>
+                    <linearGradient id="coletivo_privado">
+                        <stop offset="50%" stop-color="blue" />
+                        <stop offset="50%" stop-color="orange" />
+                    </linearGradient>
+                    <linearGradient id="coletivo_difuso">
+                        <stop offset="50%" stop-color="blue" />
+                        <stop offset="50%" stop-color="darkorchid" />
+                    </linearGradient>
+                    <linearGradient id="coletivo_baldio">
+                        <stop offset="50%" stop-color="blue" />
+                        <stop offset="50%" stop-color="saddlebrown" />
+                    </linearGradient>
+                    <linearGradient id="particular_privado">
+                        <stop offset="50%" stop-color="yellow" />
+                        <stop offset="50%" stop-color="orange" />
+                    </linearGradient>
+                    <linearGradient id="particular_difuso">
+                        <stop offset="50%" stop-color="yellow" />
+                        <stop offset="50%" stop-color="darkorchid" />
+                    </linearGradient>
+                    <linearGradient id="particular_baldio">
+                        <stop offset="50%" stop-color="yellow" />
+                        <stop offset="50%" stop-color="saddlebrown" />
+                    </linearGradient>
+                    <linearGradient id="privado_difuso">
+                        <stop offset="50%" stop-color="orange" />
+                        <stop offset="50%" stop-color="darkorchid" />
+                    </linearGradient>
+                    <linearGradient id="privado_baldio">
+                        <stop offset="50%" stop-color="orange" />
+                        <stop offset="50%" stop-color="saddlebrown" />
+                    </linearGradient>
+                    <linearGradient id="difuso_baldio">
+                        <stop offset="50%" stop-color="darkorchid" />
+                        <stop offset="50%" stop-color="saddlebrown" />
+                    </linearGradient>
+                </defs>
+
                 <g>
-                    <defs>
-                        <linearGradient id="MyGradient">
-                            <stop offset="5%" stop-color="#A8F" />
-                            <stop offset="95%" stop-color="#FDC" />
-                        </linearGradient>
-                    </defs>
-
-
-
                     <path data-extra=""  d="M 5.28 261.33L 11.76 260.85L 17.28 281.01L 11.28 281.97L 21.12 317.97L 5.28 324.69L 5.28 261.33z"/>
                     <path data-extra=""  d="M 37.44 313.41L 20.64 316.53L 11.04 282.21L 17.52 281.25L 12 260.85L 43.92 261.33L 47.28 277.89L 56.4 276.69L 61.68 300.69L 34.8 304.05L 37.44 313.41z"/>
                     <path data-extra=""  d="M 43.68 261.09L 82.32 260.85L 81.84 304.53L 36.96 313.89L 34.32 303.81L 61.68 300.21L 55.92 276.69L 47.28 277.89L 43.68 261.09z"/>
@@ -192,38 +247,31 @@
         <br />
         <div class="container col-sm-4">
             <div id="legenda-div">
-                <div class="legenda row" id="legenda-publico" categoria="publico">
+                <div class="legenda row" id="legenda-publico" categoria="publico" value="1">
                     <div class="publico col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">publico</div>
                 </div>
-                <div class="legenda row" id="legenda-coletivo" categoria="coletivo">
+                <div class="legenda row" id="legenda-coletivo" categoria="coletivo" value="2">
                     <div class="coletivo col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">coletivo</div>
                 </div>
-                <div class="legenda row" id="legenda-particular" categoria="particular">
+                <div class="legenda row" id="legenda-particular" categoria="particular" value="4">
                     <div class="particular col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">particular</div>
                 </div>
 
-                <div class="legenda row" id="legenda-privado" categoria="privado">
+                <div class="legenda row" id="legenda-privado" categoria="privado" value="8">
                     <div class="privado col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">privado</div>
                 </div>
-
-
-                <div class="legenda row" id="legenda-difuso" categoria="difuso">
+                <div class="legenda row" id="legenda-difuso" categoria="difuso" value="16">
                     <div class="difuso col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">difuso</div>
                 </div>
 
-                <div class="legenda row" id="legenda-baldio" categoria="baldio">
+                <div class="legenda row" id="legenda-baldio" categoria="baldio" value="32">
                     <div class="baldio col-sm-4">&nbsp;</div>
                     <div class="col-sm-8">baldio</div>
-                </div>
-
-                <div class="legenda row" id="legenda-multi">
-                    <div class="multi-class col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">múltiplas</div>
                 </div>
 
                 <div class="legenda row" id="legenda-apagar">

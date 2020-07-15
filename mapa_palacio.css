@@ -3,6 +3,7 @@
     stroke-linejoin: round;
     cursor: pointer;
     fill: white;
+    border: 2px solid black !important;
 }
 
 path:hover, circle:hover {
@@ -22,5 +23,20 @@ path {fill: lightgray; stroke: black}
 .privado {fill: orange; background-color: orange}
 .difuso {fill: darkorchid ; background-color:darkorchid}
 .baldio {fill: saddlebrown ; background-color: saddlebrown}
-.multi-class {fill: crimson; background-color: crimson}
 .apagar{background-color: lightgray}
+
+.publico.coletivo{fill: url(#publico_coletivo)}
+.publico.particular{fill: url(#publico_particular)}
+.publico.privado{fill: url(#publico_privado)}
+.publico.difuso{fill: url(#publico_difuso)}
+.publico.baldio{fill: url(#publico_baldio)}
+.coletivo.particular{fill: url(#coletivo_particular)}
+.coletivo.privado{fill: url(#coletivo_privado)}
+.coletivo.difuso{fill: url(#coletivo_difuso)}
+.coletivo.baldio{fill: url(#coletivo_baldio)}
+.particular.privado{fill: url(#particular_privado)}
+.particular.difuso{fill: url(#particular_difuso)}
+.particular.baldio{fill: url(#particular_bladio)}
+.privado.difuso{fill: url(#privado_difuso)}
+.privado.baldio{fill: url(#privado_baldio)}
+.difuso.baldio{fill: url(#difuso_baldio)}

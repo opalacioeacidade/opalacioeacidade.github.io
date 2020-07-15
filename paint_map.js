@@ -3,10 +3,11 @@ $(document).ready(function () {
     var caixa_legenda = document.getElementById("legenda-div")
     var categoria = null
     var lista_espacos = document.querySelectorAll("path");
+    var lista_legendas = document.querySelectorAll(".legenda")
     var serializer = new XMLSerializer();
     var mapa_svg = serializer.serializeToString(mapa)
 
-    console.log(mapa_svg)
+    // console.log(mapa_svg)
 
 
     mapa.addEventListener("click",
@@ -15,6 +16,16 @@ $(document).ready(function () {
 
             for (var i = 0; i < lista_espacos.length; i++) {
                     lista_espacos[i].classList.remove("active");
+            }
+
+            for (var i = 0; i < lista_legendas.length; i++) {
+                lista_legendas[i].classList.remove("active");
+
+                if(espaco.classList.contains(lista_legendas[i].getAttribute("categoria"))){
+                    lista_legendas[i].classList.add(('active'))
+                } else {
+                    lista_legendas[i].classList.remove(('active'))
+                }
             }
 
             if (e.target.nodeName === "path") {
@@ -26,7 +37,9 @@ $(document).ready(function () {
        "click",
        function (e) {
            var legenda = e.target.parentNode;
-           categoria = legenda.getAttribute("categoria")
+           var espaco = null
+           var categoria = legenda.getAttribute("categoria")
+           console.log(categoria);
 
            for (var i = 0; i < lista_espacos.length; i++) {
                if(lista_espacos[i].classList.contains("active")) {
@@ -34,16 +47,24 @@ $(document).ready(function () {
                    espaco = lista_espacos[i]
                }
            }
-
            if (espaco) {
                var classList = espaco.classList;
-               while (classList.length > 0) {
-                   classList.remove(classList.item(0));
+               if(!categoria){
+                   for (var i = 0; i < lista_legendas.length; i++) {
+                       lista_legendas[i].classList.remove("active");
+                   }
+                   while (classList.length > 0) {
+                       classList.remove(classList.item(0));
+                   }
+               }else if(classList.contains(categoria)) {
+                   espaco.classList.remove(categoria)
+                   legenda.classList.remove("active")
+               } else if(classList.length < 2){
+                   espaco.classList.add(categoria)
+                   legenda.classList.add("active")
                }
-               espaco.classList.add(categoria)
            }
-           categoria = null
-           espaco = null
+           espaco.classList.add("active")
        }
    )
     // https://docs.google.com/forms/d/e/1FAIpQLSfwqYsWo5Kbv8sOqOcOv0hzlItBQiE1svZ8Y5NTdHmi8EVHYA/viewform?usp=sf_link
