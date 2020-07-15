@@ -1,0 +1,26 @@
+.active{
+    stroke-width:2px;
+    stroke-linejoin: round;
+    cursor: pointer;
+    fill: white;
+}
+
+path:hover, circle:hover {
+    stroke: black !important;
+    stroke-width:4px;
+    stroke-linejoin: round;
+    cursor: pointer;
+}
+
+path {fill: lightgray; stroke: black}
+
+#legenda-div{margin-top: 75px !important;}
+
+.publico {fill: green; background-color: green}
+.coletivo {fill: blue; background-color: blue}
+.particular {fill: yellow; background-color: yellow}
+.privado {fill: orange; background-color: orange}
+.difuso {fill: darkorchid ; background-color:darkorchid}
+.baldio {fill: saddlebrown ; background-color: saddlebrown}
+.multi-class {fill: crimson; background-color: crimson}
+.apagar{background-color: lightgray}
