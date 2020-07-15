@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var mapa = document.getElementById("palacio-map");
     var caixa_legenda = document.getElementById("legenda-div")
+    var botao_ok = document.getElementById('legenda-form-input-botao')
     var categoria = null
     var lista_espacos = document.querySelectorAll("path");
     var lista_legendas = document.querySelectorAll(".legenda")
@@ -30,6 +31,8 @@ $(document).ready(function () {
 
             if (e.target.nodeName === "path") {
                 espaco.classList.add('active')
+                console.log(espaco.getAttribute('data-legenda-texto') || "")
+                document.getElementById('legenda-form-input').value = espaco.getAttribute('data-legenda-texto') || ""
             }
         }
     )
@@ -67,6 +70,20 @@ $(document).ready(function () {
            espaco.classList.add("active")
        }
    )
+
+    botao_ok.addEventListener("click", function ()  {
+        var espaco = null
+        console.log(this.value)
+        if (this.value.length > 1) {
+            for (var i = 0; i < lista_espacos.length; i++) {
+                if(lista_espacos[i].classList.contains("active")) {
+                    espaco = lista_espacos[i]
+                }
+            }
+            espaco.setAttribute('data-legenda-texto', document.getElementById('legenda-form-input').value)
+        }
+    });
+
     // https://docs.google.com/forms/d/e/1FAIpQLSfwqYsWo5Kbv8sOqOcOv0hzlItBQiE1svZ8Y5NTdHmi8EVHYA/viewform?usp=sf_link
 
     $('#my-form').submit(function(e) {
@@ -94,6 +111,4 @@ $(document).ready(function () {
             }
         });
     });
-
-
 })
