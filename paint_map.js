@@ -31,7 +31,6 @@ $(document).ready(function () {
 
             if (e.target.nodeName === "path") {
                 espaco.classList.add('active')
-                console.log(espaco.getAttribute('data-legenda-texto') || "")
                 document.getElementById('legenda-form-input').value = espaco.getAttribute('data-legenda-texto') || ""
             }
         }
@@ -42,7 +41,6 @@ $(document).ready(function () {
            var legenda = e.target.parentNode;
            var espaco = null
            var categoria = legenda.getAttribute("categoria")
-           console.log(categoria);
 
            for (var i = 0; i < lista_espacos.length; i++) {
                if(lista_espacos[i].classList.contains("active")) {
@@ -73,7 +71,6 @@ $(document).ready(function () {
 
     botao_ok.addEventListener("click", function ()  {
         var espaco = null
-        console.log(this.value)
         if (this.value.length > 1) {
             for (var i = 0; i < lista_espacos.length; i++) {
                 if(lista_espacos[i].classList.contains("active")) {
