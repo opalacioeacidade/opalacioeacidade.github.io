@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:p="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
 <!--    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
@@ -17,10 +17,31 @@
 <body>
 <br />
 <div class="container">
+
+    <p>
+        O “Palácio” e a Cidade: ressignificar relações complexas em um novo ordenamento urbano, ambiental e social – o Plano de Ordenamento Sustentável da Comunidade do Palácio
+    </p>
+
+    <p>
+        O Projeto “O Palacio e a Cidade” visa produzir Tecnologia Social através de metodologia participativa para o ordenamento de comunidade localizada em Zona Especial de Interesse Social (ZEIS) da cidade. Espera-se, ao final, elaborar o Plano de Ordenamento Sustentável da Comunidade do Morro do Palácio (POSCMP), e a consolidação de metodologia participativa de ordenamento de comunidades em ZEIS.
+    </p>
+
+    <p>
+        O Projeto foi submetido à análise de edital realizado em parceria entre a Universidade Federal Fluminense e a Prefeitura de Niterói. Entretanto, a proposta em questão não foi aprovada.  Mesmo sem o apoio financeiro da gestão municipal, os pesquisadores do NUPIJ/UFF decidiram realizar projeto piloto da pesquisa com recursos próprios a fim de validar e aperfeiçoar a metodologia junto aos moradores do Morro do Palácio e estimular a própria comunidade a pensar o território em que se localiza a partir da gramática oferecida pelo projeto.
+    </p>
+
+    <p>
+        Você foi convidado para participar da pesquisa.
+    </p>
+
+    <p>
+        Em primeiro lugar, pedimos para que você preencha o campo de identificação com o seu nome e telefone para que possamos entrar em contato caso seja necessário algum esclarecimento adicional.
+    </p>
+
     <div class="row">
-        <div id="mapa-div" class="col-sm-8">
+        <div id="mapa-div" class="col-sm-6">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 width="595.276pt" height="841.89pt" viewBox="50 200 645.276 1041.89"
+                 max-width="100%" max-height="100%" viewBox="0 250 600 600"
                  fill-rule="evenodd"
                  id="palacio-map">
 
@@ -644,55 +665,56 @@
             </svg>
         </div>
         <br />
-        <div class="container col-sm-4">
-            <div id="legenda-div">
-                <div class="legenda row" id="legenda-publico" categoria="publico" value="1">
-                    <div class="publico col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">publico</div>
-                </div>
-                <div class="legenda row" id="legenda-coletivo" categoria="coletivo" value="2">
-                    <div class="coletivo col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">coletivo</div>
-                </div>
-                <div class="legenda row" id="legenda-particular" categoria="particular" value="4">
-                    <div class="particular col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">particular</div>
-                </div>
-
-                <div class="legenda row" id="legenda-privado" categoria="privado" value="8">
-                    <div class="privado col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">privado</div>
-                </div>
-                <div class="legenda row" id="legenda-difuso" categoria="difuso" value="16">
-                    <div class="difuso col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">difuso</div>
-                </div>
-
-                <div class="legenda row" id="legenda-baldio" categoria="baldio" value="32">
-                    <div class="baldio col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">baldio</div>
-                </div>
-
-                <div class="legenda row" id="legenda-apagar">
-                    <div class="apagar col-sm-4">&nbsp;</div>
-                    <div class="col-sm-8">apagar</div>
-                </div>
-            </div>
-            <br>
-            <div id="legenda-texto">
-                <p>TEXTO</p>
-                <form id="legenda-form">
-                    <input type="text" id="legenda-form-input">
-                    <input type="button"  id="legenda-form-input-botao" value="ok">
-                </form>
-            </div>
+        <div class="container col-sm-6">
+            <img src="102931526_247748989854852_7870845754302842373_n.jpg">
         </div>
     </div>
 
-    <form id="my-form">
-        <input name="entry.1746887209" type="text" required/>
-        <input type="submit" />
-    </form>
+    <div id="legenda-div">
+        <div class="legenda row" id="legenda-publico" categoria="publico" value="1">
+            <div class="publico col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">publico</div>
+        </div>
+        <div class="legenda row" id="legenda-coletivo" categoria="coletivo" value="2">
+            <div class="coletivo col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">coletivo</div>
+        </div>
+        <div class="legenda row" id="legenda-particular" categoria="particular" value="4">
+            <div class="particular col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">particular</div>
+        </div>
+
+        <div class="legenda row" id="legenda-privado" categoria="privado" value="8">
+            <div class="privado col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">privado</div>
+        </div>
+        <div class="legenda row" id="legenda-difuso" categoria="difuso" value="16">
+            <div class="difuso col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">difuso</div>
+        </div>
+
+        <div class="legenda row" id="legenda-baldio" categoria="baldio" value="32">
+            <div class="baldio col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">baldio</div>
+        </div>
+
+        <div class="legenda row" id="legenda-apagar">
+            <div class="apagar col-sm-4">&nbsp;</div>
+            <div class="col-sm-8">apagar</div>
+        </div>
+    </div>
+    <br>
+    <div id="legenda-texto">
+        <p>TEXTO</p>
+        <form id="legenda-form">
+            <input type="text" id="legenda-form-input">
+            <input type="button"  id="legenda-form-input-botao" value="ok">
+        </form>
+    </div>
+
+    <p>nome</p>
+    <p>telefone</p>
+    <p>enviar</p>
 </div>
 </body>
 </html>
