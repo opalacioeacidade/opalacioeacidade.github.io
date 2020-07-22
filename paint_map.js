@@ -60,7 +60,7 @@ $(document).ready(function () {
                }else if(classList.contains(categoria)) {
                    espaco.classList.remove(categoria)
                    legenda.classList.remove("active")
-               } else if(classList.length < 2){
+               } else {
                    espaco.classList.add(categoria)
                    legenda.classList.add("active")
                }
