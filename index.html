@@ -38,8 +38,13 @@
         Em primeiro lugar, pedimos para que você preencha o campo de identificação com o seu nome e telefone para que possamos entrar em contato caso seja necessário algum esclarecimento adicional.
     </p>
 
-    <p>nome</p>
-    <p>telefone</p>
+    <form>
+        <label class="form-text" for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <label class="form-text" for="tel">Telefone:</label>
+        <input type="text" id="tel" name="tel">
+    </form>
+    <br>
 
     <p>
         Após preenchidos os campos indicados, você deverá colorir o mapa com as cores indicadas na legenda. Cada cor representa uma categoria específica, descrita abaixo. Caso você identifique que determinados espaços do mapa podem ser incluídos em mais de uma categoria, é possível indicar mais de uma cor para a mesma área. Nesse caso, será necessário preencher também o campo de observações, explicando a razão de o espaço haver sido colorido com mais de um cor.
@@ -712,7 +717,7 @@
 
     <div class="row">
         <div id="legenda-div" class="col-sm-6">
-            <p>Categorias:</p>
+            <p class="form-text">Categorias:</p>
             <div class="legenda row" id="legenda-publico" categoria="publico" value="1">
                 <div class="publico col-sm-4">&nbsp;</div>
                 <div class="col-sm-8">publico</div>
@@ -747,7 +752,7 @@
         </div>
 
         <div id="legenda-texto" class="col-sm-6">
-            <p>Descrição:</p>
+            <p class="form-text">Descrição:</p>
             <form id="legenda-form">
                 <textarea id="legenda-form-input" rows="6"></textarea>
                 <input type="button"  id="legenda-form-input-botao" value="ok">

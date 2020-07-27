@@ -1,6 +1,9 @@
 #legenda-form-input{
     width: 100%;
+}
 
+.form-text{
+    font-weight:bold;
 }
 
 .active{
