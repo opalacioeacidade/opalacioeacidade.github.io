@@ -1,9 +1,20 @@
+#legenda-form-input{
+    width: 100%;
+
+}
+
 .active{
     stroke-width:2px;
     stroke-linejoin: round;
     cursor: pointer;
     fill: white;
     border: 2px solid black !important;
+}
+
+em{
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-style: double;
 }
 
 img {
@@ -20,8 +31,6 @@ path:hover, circle:hover {
 }
 
 path {fill: lightgray; stroke: black}
-
-#legenda-div{margin-top: 75px !important;}
 
 .publico {fill: green; background-color: green}
 .coletivo {fill: blue; background-color: blue}
@@ -42,7 +51,7 @@ path {fill: lightgray; stroke: black}
 .coletivo.baldio{fill: url(#coletivo_baldio)}
 .particular.privado{fill: url(#particular_privado)}
 .particular.difuso{fill: url(#particular_difuso)}
-.particular.baldio{fill: url(#particular_bladio)}
+.particular.baldio{fill: url(#particular_baldio)}
 .privado.difuso{fill: url(#privado_difuso)}
 .privado.baldio{fill: url(#privado_baldio)}
 .difuso.baldio{fill: url(#difuso_baldio)}
