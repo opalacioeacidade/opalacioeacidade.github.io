@@ -8,6 +8,8 @@ $(document).ready(function () {
     var nome = ''
     var tel = ''
     var data = {}
+    var areas={}
+    var espaco_id= 0
     var categoria = null
     var lista_espacos = document.querySelectorAll("path");
     var lista_legendas = document.querySelectorAll(".legenda")
@@ -91,7 +93,16 @@ $(document).ready(function () {
         nome = document.querySelector('#nome');
         tel = document.querySelector('#tel');
         mapa_svg = serializer.serializeToString(mapa)
-        data = {"nome": nome.value, "tel": tel.value, 'mapa': mapa_svg}
+
+        for (var i = 0; i < lista_espacos.length; i++) {
+            areas[lista_espacos[i].getAttribute('id')] = {
+                'categorias': lista_espacos[i].getAttribute('class'),
+                'descricao': lista_espacos[i].getAttribute('data-legenda-texto') }
+        }
+
+        console.log(areas)
+
+        data = {"nome": nome.value, "tel": tel.value, 'dados': JSON.stringify(areas), 'mapa': mapa_svg}
 
         console.log(data)
 
