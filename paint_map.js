@@ -103,6 +103,8 @@ $(document).ready(function () {
             },
             body: JSON.stringify(data)
         })
+
+        alert("Sua mensagem foi enviada,\n obriado por participar.")
     })
 });
 
