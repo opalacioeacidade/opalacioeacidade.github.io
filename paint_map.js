@@ -5,7 +5,7 @@ $(document).ready(function () {
     let caixa_legenda = document.getElementById("legenda-div")
     let botao_ok = document.getElementById('legenda-form-input-botao')
     let botao_enviar = document.getElementById('botao-enviar')
-    var name = ''
+    var nome = ''
     var tel = ''
     var data = {}
     var categoria = null
@@ -88,10 +88,10 @@ $(document).ready(function () {
     });
 
     botao_enviar.addEventListener("click", function () {
-        name = document.querySelector('#nome');
+        nome = document.querySelector('#nome');
         tel = document.querySelector('#tel');
         mapa_svg = serializer.serializeToString(mapa)
-        data = {"name": name.value, "tel": tel.value, 'mapa': mapa_svg}
+        data = {"nome": nome.value, "tel": tel.value, 'mapa': mapa_svg}
 
         console.log(data)
 
